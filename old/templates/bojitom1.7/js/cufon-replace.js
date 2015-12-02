@@ -1,0 +1,1 @@
+Cufon.replace('h2,h3,.counter,.blog_more,#pathway a, .navigation a,.jqModal, #menu-vertical a,.contentheading,.calendar ', {hover:true });
