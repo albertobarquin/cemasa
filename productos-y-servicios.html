@@ -33,18 +33,19 @@
 
     </style>
 </head>
-<body>
+<body ng-app="cemasa">
 <div id="art-main">
     <nav class="art-nav">
-        <div class="art-nav-inner">
-            <ul class="art-hmenu">
-                <li><a href="inicio.html" class="">Inicio</a></li>
-                <li><a href="quienes-somos.html" class="">Quiénes somos</a></li>
-                <li><a href="productos-y-servicios.html" class="active">Productos y servicios</a></li>
-                <li><a href="contacte-con-nosotros.html">Contacte con nosotros</a></li>
-            </ul>
-        </div>
-    </nav>
+        <nav class="art-nav">
+            <div class="art-nav-inner">
+                <ul class="art-hmenu">
+                    <li><a href="index.html" >Inicio</a></li><li>
+                    <a href="quienes-somos.html" >Quiénes somos</a></li>
+                    <li><a href="productos-y-servicios.html" class="active">Qué hacemos</a></li>
+                    <li><a href="buscador.html">Buscador de productos</a></li>
+                    <li><a href="contacte-con-nosotros.html">Contacte con nosotros</a></li></ul>
+            </div>
+        </nav>
     <header class="art-header">
 
 
@@ -147,5 +148,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 <!-- app.js -->
 <script src="scripts/app.js"></script>
+<!-- Services -->
+<script src="scripts/services/JsonService.js"></script>
+<!-- Controllers -->
+<script src="scripts/controllers/productsController.js"></script>
 </body>
 </html>
