@@ -66,9 +66,11 @@
                                 <div class="art-content-layout">
                                     <div class="art-content-layout-row">
                                         <div class="art-layout-cell layout-item-0" style="width: 50%" ng-controller ="productsController">
+                                            <div ng-repeat="producto in productos">
+                                                {{producto.familia}} {{producto.producto}}
+                                            </div>
 
-                                           productos
-                                            {{productos}}
+                                           <!-- {{productos | json}}-->
 
                                         </div>
                                         <div class="art-layout-cell layout-item-0" style="width: 50%">
