@@ -1,11 +1,19 @@
 angular.module("cemasa").controller("productsController", function($scope, JsonService) {
-    var test = JsonService.getData();
-    console.debug(test.data);
-    $scope.productos = null;
-
     //$http devuelve una promesa que desempaquetamos con then
     JsonService.getData().then(function(dataResponse) {
-        $scope.productos = dataResponse.data;
+        var jsonA = dataResponse.data;
+
+        var jsonB=_(jsonA).groupBy("Familia")
+
+
+        var jsonC=_(jsonB).map(function (value,key){
+            return {'Familia':key, 'Producto': _(value).pluck('Producto')}
+        })
+
+
+        $scope.productos = jsonC;
+        console.debug( $scope.productos);
+
     });
 
 });

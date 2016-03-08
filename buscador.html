@@ -67,10 +67,15 @@
                                     <div class="art-content-layout-row">
                                         <div class="art-layout-cell layout-item-0" style="width: 50%" ng-controller ="productsController">
                                             <div ng-repeat="producto in productos">
-                                                {{producto.familia}} {{producto.producto}}
+                                                <h2>{{producto.Familia}}<h2>
+                                                    <ul>
+                                                        <li ng-repeat=" chiribico in producto.Producto">
+                                                            {{chiribico}}
+                                                        </li>
+                                                    </ul>
                                             </div>
 
-                                           <!-- {{productos | json}}-->
+                                           <!--TODO: modify "chiribico" and productos names for consistency-->
 
                                         </div>
                                         <div class="art-layout-cell layout-item-0" style="width: 50%">
@@ -107,6 +112,8 @@
 
 <!-- Cargamos la librería de AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="scripts/vendors/underscore-min.js"></script>
+
 <!-- app.js -->
 <script src="scripts/app.js"></script>
 <!-- Services -->
