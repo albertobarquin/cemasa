@@ -14,7 +14,7 @@ angular.module("cemasa").service("JsonService", [ '$http', function($http) {
 
     }
     this.getBrands = function(){
-        return $http.get(jsonUrl, {
+        return $http.get(brandsUrl, {
             cache: true
         });
 

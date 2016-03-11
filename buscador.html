@@ -70,7 +70,7 @@
                                             <div ng-repeat="producto in productos| filter: busqueda" abk-producto chiribico = "chiribico">
 
 
-                                                <h2>{{producto.Familia}}<h2>
+                                                <h2>{{producto.Familia}}</h2>
                                                     <ul>
                                                         <li ng-repeat=" chiribico in producto.Producto">
                                                             {{chiribico}}
@@ -81,8 +81,15 @@
                                            <!--TODO: modify "chiribico" and productos names for consistency-->
 
                                         </div>
-                                        <div class="art-layout-cell layout-item-0" style="width: 50%">
+                                        <div class="art-layout-cell layout-item-0" style="width: 50%" ng-controller ="brandsController">
                                             <h2 class="art-postheader">Nuestras Marcas</h2>
+                                            <ul>
+                                                <li ng-repeat = "brand in brands">
+                                                    <!--<a href="{{brand.url}}" target="_blank" >{{brand.MARCA}}</a>-->
+                                                    <a href="{{brand.url}}" target="_blank" title="{{brand.MARCA}}"><img src="./logos/{{brand.inc}}.png"></a>
+                                                </li>
+                                            </ul>
+
                                         </div>
                                     </div>
 
@@ -123,5 +130,7 @@
 <script src="scripts/services/JsonService.js"></script>
 <!-- Controllers -->
 <script src="scripts/controllers/productsController.js"></script>
+<script src="scripts/controllers/brandsController.js"></script>
+
 </body>
 </html>
