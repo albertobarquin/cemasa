@@ -66,7 +66,10 @@
                                 <div class="art-content-layout">
                                     <div class="art-content-layout-row">
                                         <div class="art-layout-cell layout-item-0" style="width: 50%" ng-controller ="productsController">
-                                            <div ng-repeat="producto in productos">
+                                            <div><input type="text" class="form-control buscar" placeholder="Search" ng-model="busqueda"></div>
+                                            <div ng-repeat="producto in productos| filter: busqueda" abk-producto chiribico = "chiribico">
+
+
                                                 <h2>{{producto.Familia}}<h2>
                                                     <ul>
                                                         <li ng-repeat=" chiribico in producto.Producto">
